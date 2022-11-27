@@ -11,6 +11,7 @@ export default function BookShow({ book, deleteBook, editBook }) {
   return (
     <div className="book-show">
       <div>
+        <img src={`https://picsum.photos/seed/${book.id}/300/200`} alt="books" />
         {showEdit
           ? <BookEdit book={book} editBook={editBook} closeEdit={closeEdit} />
           : <h3>{book.title}</h3>}
