@@ -15,6 +15,7 @@ export default function App() {
   }, [])
 
   const createBook = async (title) => {
+    if (!title) return
     const { data } = await axios.post('http://localhost:3001/books', {
       title
     })
