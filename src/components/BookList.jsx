@@ -1,9 +1,8 @@
-import { useContext } from "react"
-import { BooksContext } from "../context/BooksContext"
+import { useBooksContext } from "../hooks/useBooksContext"
 import BookShow from "./BookShow"
 
 export default function BookList() {
-  const { books } = useContext(BooksContext)
+  const { books } = useBooksContext()
 
   return (
     <div className="book-list">

@@ -1,7 +1,7 @@
 {
   "books": [
     {
-      "title": "harry potter",
+      "title": "harry potter 2",
       "id": 1
     },
     {
@@ -17,16 +17,8 @@
       "id": 7
     },
     {
-      "title": "aston martin vanquish",
-      "id": 8
-    },
-    {
       "title": "aston martin db11",
       "id": 9
-    },
-    {
-      "title": "aston martin db9 gt",
-      "id": 10
     }
   ]
 }

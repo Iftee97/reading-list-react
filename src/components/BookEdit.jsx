@@ -1,9 +1,9 @@
-import { useState, useContext } from "react"
-import { BooksContext } from "../context/BooksContext"
+import { useState } from "react"
+import { useBooksContext } from "../hooks/useBooksContext"
 
 export default function BookEdit({ book, closeEdit }) {
   const [title, setTitle] = useState(book.title)
-  const { editBook } = useContext(BooksContext)
+  const { editBook } = useBooksContext()
 
   const handleSubmit = (e) => {
     e.preventDefault()
