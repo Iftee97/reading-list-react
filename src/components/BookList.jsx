@@ -3,11 +3,14 @@ import { BooksContext } from "../context/BooksContext"
 import BookShow from "./BookShow"
 
 export default function BookList({ books, deleteBook, editBook }) {
-  const value = useContext(BooksContext)
-  console.log('context value:', value)
+  const { count, incrementCount } = useContext(BooksContext)
 
   return (
     <div className="book-list">
+      <div>
+        count: {count} <br />
+        <button onClick={incrementCount}>add 1</button>
+      </div>
       {books.map((book) => (
         <BookShow
           book={book}
