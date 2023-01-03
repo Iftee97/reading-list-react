@@ -1,5 +1,5 @@
 import { useContext } from "react"
-import { BooksContext } from "../context/books"
+import { BooksContext } from "../context/BooksContext"
 import BookShow from "./BookShow"
 
 export default function BookList({ books, deleteBook, editBook }) {
