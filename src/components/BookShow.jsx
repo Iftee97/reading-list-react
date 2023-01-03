@@ -1,8 +1,10 @@
-import { useState } from "react"
+import { useState, useContext } from "react"
+import { BooksContext } from "../context/BooksContext"
 import BookEdit from "./BookEdit"
 
-export default function BookShow({ book, deleteBook, editBook }) {
+export default function BookShow({ book }) {
   const [showEdit, setShowEdit] = useState(false)
+  const { deleteBook } = useContext(BooksContext)
 
   const closeEdit = () => {
     setShowEdit(false)
@@ -13,7 +15,7 @@ export default function BookShow({ book, deleteBook, editBook }) {
       <div>
         <img src={`https://picsum.photos/seed/${book.id}/300/200`} alt="books" />
         {showEdit
-          ? <BookEdit book={book} editBook={editBook} closeEdit={closeEdit} />
+          ? <BookEdit book={book} closeEdit={closeEdit} />
           : <h3>{book.title}</h3>}
       </div>
       <div className="actions">
