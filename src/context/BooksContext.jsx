@@ -31,16 +31,22 @@ export const BooksContextProvider = ({ children }) => {
     setBooks(books.map((book) => (book.id === id ? data : book)))
   }
 
-  const valueToShare = {
-    books,
-    fetchBooks,
-    createBook,
-    deleteBook,
-    editBook
-  }
+  // const valueToShare = {
+  //   books,
+  //   fetchBooks,
+  //   createBook,
+  //   deleteBook,
+  //   editBook
+  // }
 
   return (
-    <BooksContext.Provider value={valueToShare}>
+    <BooksContext.Provider value={{
+      books,
+      fetchBooks,
+      createBook,
+      deleteBook,
+      editBook
+    }}>
       {children}
     </BooksContext.Provider>
   )
